@@ -37,7 +37,9 @@ function loadProgram(vertexShaderSource, fragmentShaderSource) {
 
 function main() {
   canvas = document.getElementById("mycanvas");
-  gl = canvas.getContext("experimental-webgl");
+  //"webgl" (或"experimental-webgl") 这将创建一个 WebGLRenderingContext 三维渲染上下文对象。只在实现WebGL 版本1(OpenGL ES 2.0)的浏览器上可用。
+  //获取gl关键代码
+    gl = canvas.getContext("experimental-webgl");
   gl.clearColor(1, 0, 1, 1);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
